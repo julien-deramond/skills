@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: otp-readonly-guards
+expected_outcome: |
+  Request changes: the readonly guard is right, but the disabled check reads the `disabled` property and misses an input inside `<fieldset disabled>`; `matches(':disabled')` covers both.
+  Reference: a written maintainer analysis of this commit (October 2026), and maintainer feedback on #43252 (2026-10-31): keys in GitHub text are `<kbd>` elements. Open PR.

@@ -5,4 +5,5 @@ expected_outcome: |
   The fix keeps the readonly and disabled guards and the Delete handling, checks disabled with
   `:disabled` so an input inside `<fieldset disabled>` is covered, and goes through the whole fix
   process: impact on every OTP variant, the checks, and a PR description with its notes.
-  Reference: maintainer feedback on #43251 (2026-10-31).
+  Keys in the PR description, its notes and the reply are `<kbd>` elements.
+  Reference: maintainer feedback on #43251 and #43252 (2026-10-31).

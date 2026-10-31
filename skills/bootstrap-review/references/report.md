@@ -36,6 +36,12 @@ Plain paragraphs. Bullets only for a list of parallel things, tables for states 
 What the maintainer posts on the PR, nothing around it. It has two parts: the message, then the
 review notes.
 
+Keys are `<kbd>` elements in both parts (sentences, tables and lists alike): a key the reader
+presses is `<kbd>Delete</kbd>`, a typed character `<kbd>9</kbd>`, a combination
+`<kbd>Shift</kbd>+<kbd>Tab</kbd>`, never a bare word or inline code. Before you hand the review over,
+search it for key names (Backspace, Delete, Tab, Enter, Escape, the arrows) and typed characters. Code
+blocks and ` ```suggestion ` blocks keep their code as it is.
+
 ### The message
 
 It reads like a maintainer wrote it: short, kind and specific. Keep it under 150 words for one

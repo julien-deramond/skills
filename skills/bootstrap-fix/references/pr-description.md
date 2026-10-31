@@ -7,6 +7,13 @@ repository has a PR template with headings and checkboxes. This skill follows ne
 maintainers' choice: the description is the paragraphs below, the way their own merged fixes read.
 Where the caller's or the project's rules disagree on anything else, those rules win.
 
+**Keys are `<kbd>` elements.** In the description, its notes and the reply on the issue (sentences,
+tables and lists alike), a key the reader presses is `<kbd>Delete</kbd>`, a typed character
+`<kbd>9</kbd>`, a combination `<kbd>Shift</kbd>+<kbd>Tab</kbd>`, never a bare word or inline code.
+Before you hand the text over, search it for key names (Backspace, Delete, Tab, Enter, Escape, the
+arrows) and typed characters. Titles show HTML as text, so a title names the key in words. Code
+blocks keep their code as it is.
+
 ## Form
 
 - **Title**: what the change does, in the style of the repository's merged PRs ("Fix invalid division

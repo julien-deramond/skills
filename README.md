@@ -40,3 +40,7 @@ scripts/check.py    checks the layout, the metadata, the sources and the evals
 ```
 
 [AGENTS.md](AGENTS.md) has the rules for changing a skill.
+
+## License
+
+[MIT](LICENSE). Text copied from a source keeps its own licence, recorded in [`sources.toml`](sources.toml).

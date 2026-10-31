@@ -20,8 +20,8 @@ that keep track of what each one owes to other work.
   (`engineering/`, `in-progress/`) would make every change of status or category a move and a
   broken link.
 - **Evals in each skill, in the `claude plugin eval` layout**, from real cases with a known outcome.
-- **Private first.** The repository goes public once its first skill does well on its evals and
-  nothing in it names private material.
+- **Private first.** The repository went public on 2026-10-31, once its first skill did better than
+  no skill on its evals and nothing in it named private material.
 
 ## Consequences
 

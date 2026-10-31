@@ -9,7 +9,9 @@ Judge the change on two questions, and keep them apart until the recommendation:
 - **Spec.** Does it do what the issue asked? All of it, nothing more, and at the cause? List what's
   missing or partial, what wasn't asked for (scope creep), and what looks done but is wrong. Quote the
   issue line each finding rests on. With no issue, the PR description is the spec, and the review
-  says so.
+  says so. A fix must cover its topic globally: when the same cause affects sibling components,
+  sizes or variants that the PR leaves alone, the fix is incomplete, and the review asks for all of
+  them in the same PR.
 - **Standards.** Does it follow the project's documented rules and the way the code around it
   already works? Cite the rule or the existing code for each finding. Skip what a linter or CI
   already enforces, unless CI fails.

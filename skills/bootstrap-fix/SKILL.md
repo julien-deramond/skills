@@ -11,8 +11,9 @@ metadata:
 # Bootstrap fix
 
 A fix is ready when a maintainer can read its description, look at the diff, and open the PR
-without redoing any of the work. That means the cause is found, the change is the smallest one in
-the place that already handles the case, the checks it touches pass, and the description says what
+without redoing any of the work. That means the cause is found, the fix covers the topic everywhere it
+reaches, each change is the smallest one in the place that already handles the case, its impact
+is checked on everything it touches, the checks pass, and the description says what
 a reviewer needs and nothing else.
 
 You produce, per direction, a **branch** with one commit (two at most) and its **PR description**,
@@ -43,6 +44,7 @@ names, file names, metadata, where to push), follow it for the form and this ski
    needs a maintainer's yes in the issue first. Say which, with the reason, and stop.
 3. **Reproduce, then find the cause.** Write the smallest page or test that shows the problem on the
    base. Find the line that causes it. The issue's title often names the symptom: fix the cause.
+   Then find every place the same cause lives: the fix is global, never one component at a time.
 4. **Load the project's rules from the base, not from memory.** `AGENTS.md`, `.github/CONTRIBUTING.md`
    and, on v6, the project skill for the area (`skills/bootstrap-component`, `-component-js`,
    `-color-system`, `-utility-api`, `-v5-v6-migration`). Then bootstrap-review's
@@ -51,10 +53,11 @@ names, file names, metadata, where to push), follow it for the form and this ski
    (a maintainer's "we could do A or B", another open PR, a docs-only option), make one branch per
    direction, three at most, each from the upstream base. Don't invent directions.
 6. **Write the fix** ([references/fix.md](references/fix.md)): the smallest change, in the place that
-   already handles the case, with its test, its docs, and the same fix where the problem repeats.
+   already handles the case, with its test and its docs, applied everywhere the topic reaches.
 7. **Check it** ([references/fix.md](references/fix.md), "Checks"): run what the change touches,
    build both sides when the output changes, and take the before and after evidence for a visual
-   change. Then try to break your fix: the states, widths, modes and siblings it might miss.
+   change. Then check the impact on every component the change touches: all states, usages and odd
+   cases ([references/fix.md](references/fix.md), "The impact").
 8. **Commit** one commit, two at most, with a message in the repository's style that says why.
 9. **Write the PR description** ([references/pr-description.md](references/pr-description.md)) and
    the report: the cause, each direction with its trade-off, the recommended one, and what you

@@ -24,7 +24,8 @@ every layer, and a later layer beats an earlier one), specificity, then source o
 
 ## States
 
-Check every state the change can reach, not only the one in the issue: hover, `:focus-visible` against
+Check every component the change modifies, in every state it can reach, not only the one in the
+issue: hover, `:focus-visible` against
 `:focus-within` (a wrapper never matches `:focus-visible`), active, disabled, read-only, the
 validation states, checked and indeterminate, dark mode, right to left, a narrow width, 200% zoom,
 `prefers-reduced-motion`, and forced colors when the change touches borders, outlines or

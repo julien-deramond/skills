@@ -1,5 +1,5 @@
 schema_version: "1.1"
 name: switch-lg-label
 expected_outcome: |
-  Request: the large switch and its label line up like the default and small sizes.
-  Reference: the team's merged fix, twbs/bootstrap#43186.
+  Request: the large switch and its label line up like the default and small sizes, and so do the large checkbox and radio that share the cause. The fix is global, not for the switch alone.
+  Reference: the team's merged fix (which fixed the switch only), twbs/bootstrap#43186.

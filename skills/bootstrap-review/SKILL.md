@@ -65,7 +65,8 @@ the content.
    [references/frontend.md](references/frontend.md) when the PR touches CSS, markup, docs examples
    or behaviour in the browser.
 5. **Review on two axes, kept apart** ([references/method.md](references/method.md)). Spec: does it
-   fix the reported problem at its cause, all of it, and nothing else? Standards: does it follow the
+   fix the reported problem at its cause, everywhere that cause reaches (every component, size and
+   variant, not only the one reported), and nothing else? Standards: does it follow the
    project's rules and the checks in `bootstrap.md`? Find the root cause yourself before you judge
    the fix: a PR's title can name the wrong problem.
 6. **Check, don't assume.** Link the lines at the pinned commit. Measure instead of eyeballing:

@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: strength-text-color
+expected_outcome: |
+  Request: the strength text gets a real, readable color for each level.
+  Reference: the team's merged fix, twbs/bootstrap#43122.

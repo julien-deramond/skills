@@ -74,7 +74,7 @@ kind = "corpus"
 private = true
 description = "A private maintainers' workspace with written analyses of open twbs/bootstrap pull requests"
 read = "2026-10-31"
-informs = ["bootstrap-review"]
+informs = ["bootstrap-review", "bootstrap-fix"]
 took = """
 The report's shape (what it is, where it stands, findings, directions, recommendation, next action),
 the rules for pull requests from outside contributors, measured evidence (probes written from
@@ -120,4 +120,28 @@ took = """
 A status for each skill (draft, in progress, promoted), decisions kept as ADRs in the repository,
 and no em dashes in any prose. Status became metadata here instead of bucket folders, so a skill
 never moves.
+"""
+
+[[source]]
+id = "maintainer-pr-description-rules"
+kind = "corpus"
+private = true
+description = "A maintainer's written rules for fix branches and PR descriptions, used for Bootstrap fixes since October 2026"
+read = "2026-10-31"
+informs = ["bootstrap-fix"]
+took = """
+One branch per real direction from the upstream base, one or two commits, `dist/` reverted, the
+checks the change touches, before and after evidence for a visual change, and a PR description in
+plain paragraphs: problem and fix first, a Before | After table, the compiled CSS diff, why this
+approach, no reviewer instructions and no list of passing checks. Rewritten; no text copied.
+"""
+
+[[source]]
+id = "maintainer-merged-fixes"
+kind = "corpus"
+description = "Fixes merged into twbs/bootstrap by its maintainers in October 2026, used as the reference for the bootstrap-fix eval cases"
+read = "2026-10-31"
+informs = ["bootstrap-fix"]
+took = """
+The eval cases and what a good fix for each looks like. Nothing from them is in the skill itself.
 """

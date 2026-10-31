@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: temporal-input-indicator
+expected_outcome: |
+  Request: the picker icons sit at the inline end of date and time inputs in Chrome again.
+  Reference: the team's merged fix, twbs/bootstrap#43181.

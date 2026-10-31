@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: negative-margins-docs
+expected_outcome: |
+  Request: the docs stop listing an option v6 removed.
+  Reference: the team's merged fix, twbs/bootstrap#43027.

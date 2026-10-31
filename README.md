@@ -14,6 +14,7 @@ was read, so a change upstream can be weighed against what this repository took.
 | Skill | What it does | Status |
 | --- | --- | --- |
 | [bootstrap-review](skills/bootstrap-review/SKILL.md) | Review a twbs/bootstrap pull request or branch the way a core maintainer does: evidence for every finding, then approve, request changes or close. | draft |
+| [bootstrap-fix](skills/bootstrap-fix/SKILL.md) | Turn a twbs/bootstrap issue into a fix branch and its PR description, or say why no fix should be made. Installed with bootstrap-review. | draft |
 
 A skill's `status` is `draft` (being tuned against its evals), `beta` (used every day, still
 changing) or `stable`.

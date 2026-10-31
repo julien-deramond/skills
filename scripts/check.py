@@ -151,7 +151,8 @@ def check_prose():
         if any(part.startswith(".") or part.endswith("-workspace") for part in path.relative_to(ROOT).parts):
             continue
         for number, line in enumerate(path.read_text().splitlines(), 1):
-            if "—" in line or " -- " in line:
+            prose = re.sub(r"`[^`]*`", "", line)
+            if "—" in prose or " -- " in prose:
                 error(path, f"line {number}: em dash (rewrite the sentence)")
 
 

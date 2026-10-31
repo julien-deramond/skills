@@ -1,6 +1,6 @@
 ---
 name: bootstrap-review
-description: Review a twbs/bootstrap pull request or branch the way a core maintainer does, with evidence for every finding, and end with a decision (approve, request changes, comment or close) and the review text to post. Use it whenever asked to review a Bootstrap PR (a twbs/bootstrap number or URL, "review #43150"), to check a branch or a diff in a Bootstrap checkout before it's opened, to decide whether a contributor's PR should be merged, changed or closed, or to draft a review comment for one. Covers v6 (`main`), v5 (`v5-dev`) and the frozen docs (`gh-pages`).
+description: Review a twbs/bootstrap pull request or branch the way a core maintainer does, with evidence for every finding, and end with a decision (approve, request changes, supersede, comment or close) measured against the conclusion its issue calls for, and the review text to post. Use it whenever asked to review a Bootstrap PR (a twbs/bootstrap number or URL, "review #43150"), to check a branch or a diff in a Bootstrap checkout before it's opened, to decide whether a contributor's PR should be merged, changed or closed, or to draft a review comment for one. Covers v6 (`main`), v5 (`v5-dev`) and the frozen docs (`gh-pages`).
 metadata:
   author: Julien Déramond
   version: "2026.10.31"
@@ -13,6 +13,11 @@ metadata:
 A review answers one question for a maintainer: merge it, change it, or close it, and why. Every
 finding rests on something the maintainer can check: a line on GitHub, a measurement, a probe, a
 screenshot. Anything you didn't check, you say.
+
+The PR's issue has one right conclusion, and the review measures the PR against it. Analyzing the
+issue, fixing it (bootstrap-fix) and reviewing a PR for it reach the same conclusion with the same
+work: [references/conclusion.md](references/conclusion.md) holds that work, the conclusions and the
+decision each PR gets. Read it before you start.
 
 You produce two texts: the **report** for the maintainer who decides, and the **review** to post: a
 short message for the author, with the full public analysis collapsed under it as review notes, so
@@ -45,7 +50,8 @@ the content.
    risky or suspicious change and report only that.
 3. **Read the whole thread and its spec.** The linked issue is the spec. Read it, its comments, the
    PR's reviews, CI, and look for other open PRs or branches on the same issue or the same files
-   (`gh search prs "<key words>" -R twbs/bootstrap`). Note who waits on whom, and since when.
+   (`gh search prs "<key words>" -R twbs/bootstrap`), and for duplicates and earlier answers
+   (`gh search issues "<key words>" -R twbs/bootstrap`). Note who waits on whom, and since when.
    Then ask whether the team agreed to the change. A new variable, option, utility, class or
    component is a feature, even when it's small and called a fix. A feature needs a maintainer's
    yes in the issue. A `needs-decision` label, or no maintainer reply at all, means there isn't one
@@ -65,26 +71,31 @@ the content.
    Then read [references/bootstrap.md](references/bootstrap.md) for what those files don't say, and
    [references/frontend.md](references/frontend.md) when the PR touches CSS, markup, docs examples
    or behaviour in the browser.
-5. **Review on two axes, kept apart** ([references/method.md](references/method.md)). Spec: does it
-   fix the reported problem at its cause, everywhere that cause reaches (every component, size and
-   variant, not only the one reported), and nothing else? Standards: does it follow the
-   project's rules and the checks in `bootstrap.md`? Find the root cause yourself before you judge
-   the fix: a PR's title can name the wrong problem.
-6. **Check, don't assume.** Link the lines at the pinned commit. Measure instead of eyeballing:
-   build the base and compare, write a probe from scratch, read computed values. For a visual change,
-   look at the rendering (the deploy preview, or your own build) next to the base.
+5. **Reach the issue's conclusion first** ([conclusion.md](references/conclusion.md)), on your own:
+   reproduce on the base, find the cause and every place it lives, and decide whether the issue is
+   refused, waits on a maintainer, or is confirmed, with its right fix. A PR's title can name the
+   wrong problem. Then **review the PR on two axes, kept apart**
+   ([references/method.md](references/method.md)). Spec: does it fix the problem at that cause,
+   everywhere that cause reaches, and nothing else? Standards: does it follow the project's rules and
+   the checks in `bootstrap.md`?
+6. **Check, don't assume, as much as a fix is checked** ([conclusion.md](references/conclusion.md),
+   "The same work"). Link the lines at the pinned commit. Measure instead of eyeballing: build the base
+   and the change and diff the compiled CSS, write a probe from scratch, read computed values, count a
+   component's events on both sides. Check the impact on every component the change touches, in all
+   its states, sizes, variants, docs usages and odd cases, and run the checks the change touches. For
+   a visual change, look at the rendering (the deploy preview, or your own build) next to the base.
 7. **Try to disprove each finding** before you keep it. Drop what doesn't survive. Mark what you
    couldn't verify as such. A claim about which rule wins (specificity, layer, source order) is
    measured in that state, not worked out on paper.
-8. **Decide.** Approve, approve with optional suggestions, request changes, comment, or close
-   (superseded, out of scope, more code than the problem justifies, or a feature that needs an
-   agreed issue first). Weigh the smallest change in the place that already handles the case, and say what the
-   other choice would cost.
+8. **Decide from how far the PR is from the conclusion** (the table in
+   [conclusion.md](references/conclusion.md)): approve, request changes, supersede it with a branch
+   that credits its author, comment, or close. Weigh the smallest change in the place that already
+   handles the case, and say what the other choice would cost.
 9. **Write the report and the review** ([references/report.md](references/report.md)).
 
 ## Short cuts
 
-- A PR that doesn't build, fails lint, targets the wrong branch or repository, or adds a feature
-  nobody agreed to in an issue gets a short review saying what's needed. Don't spend the full
-  evidence pass on it.
+- A PR that stops early for a reason [conclusion.md](references/conclusion.md) lists (it doesn't
+  build, fails lint, targets the wrong branch or repository, or adds a feature nobody agreed to in an
+  issue) gets a short review saying what's needed. Don't spend the full evidence pass on it.
 - A PR that only needs a rebase, a test or a small change gets a review, not an alternative branch.

@@ -3,3 +3,4 @@ name: form-label-tokens-approve
 expected_outcome: |
   Approve: the include is the right fix and matches the other form partials. The posted review is a short message with the full public analysis collapsed under it.
   Reference: maintainer feedback on #43233 (2026-10-31): an approval must keep the analysis and non-regression checks on the PR, not only a summary.
+  Reference: maintainer feedback on #43231 and #43233 (2026-10-31): the review does the same work as the fix of the issue (form-label-tokens-fix): the other token maps and the impact are checked.

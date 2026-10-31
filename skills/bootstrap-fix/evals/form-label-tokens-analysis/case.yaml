@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: form-label-tokens-analysis
+expected_outcome: |
+  Confirm the bug and give the same conclusion, with the same work, as the fix of this issue (form-label-tokens-fix) and the review of its PR (form-label-tokens-approve): the label token map is built but never output, the right fix includes it on both label classes with the tokens mixin import, the other token maps are checked, the right fix is built and its impact checked, and no branch is handed over.
+  Reference: maintainer feedback on #43231 and #43233 (2026-10-31): an analysis of an issue, a fix for it and a review of its PR reach the same conclusion with the same tests, analysis and cross-references.

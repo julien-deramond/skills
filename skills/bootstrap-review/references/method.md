@@ -51,7 +51,8 @@ Every finding gets one:
 ## Disprove before you report
 
 Take each finding and try to break it: read the code path again, run the probe on the base too,
-look for the rule or the test that already covers it. A finding that doesn't survive is dropped, not
+look for the rule or the test that already covers it. Then read the posted review sentence by
+sentence against the evidence. A finding that doesn't survive is dropped, not
 softened. A finding you believe but couldn't confirm is reported as such ("not reproduced").
 
 ## Directions

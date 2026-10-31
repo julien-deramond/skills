@@ -35,7 +35,12 @@ Plain paragraphs. Bullets only for a list of parallel things, tables for states 
 What the maintainer posts on the PR, nothing around it. It reads like a maintainer wrote it: short,
 kind and specific.
 
-- Open with a short thanks to the author by handle, then the decision in the first sentences ("The
+Keep it under 150 words for one finding and under 300 for several, code blocks aside. The detail
+lives in the report: the review names the finding and its fix, and doesn't repeat the evidence
+tables or the list of what was checked.
+
+- Open with a short thanks to the author by handle, then the decision within the first three
+  sentences ("The
   fix works for the docs example, but I'd rather…").
 - One request per paragraph, or a short list of what's missing (a test, the docs, lint). Each request
   says why, in one sentence, with the line or the measurement behind it.

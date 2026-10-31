@@ -65,6 +65,8 @@ with this one, they win.
 - A change to `.github/workflows/` pins actions by commit SHA, keeps jobs that publish or deploy
   behind `if: github.repository_owner == 'twbs'`, and matches tags precisely enough that a prerelease
   tag doesn't publish as a release.
+- A workflow triggered by a release also runs for GitHub prereleases (`release: published` fires
+  for both). Ask whether a prerelease should publish too, and say what it would publish as.
 
 ## Scope and the pull request itself
 

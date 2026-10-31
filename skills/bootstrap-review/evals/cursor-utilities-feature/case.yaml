@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: cursor-utilities-feature
+expected_outcome: |
+  Close, or ask for a decision first: new cursor utilities are a feature the team hasn't agreed to (and refused before), projects can add them with the Utilities API, and the PR commits built `dist/` files.
+  Reference: A maintainer's comment on this commit (February 2026). Held out: written after iteration 1, to check the feature-agreement rule beyond the cases it came from.

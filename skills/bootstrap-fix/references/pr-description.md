@@ -43,6 +43,22 @@ result, what wasn't checked, and a nested closed block, "How to check it again",
 Sass or script as code. Screenshots are referenced by file name and attached by whoever opens the PR.
 They never hold anything private, local paths, or the maintainer's next steps.
 
+## The reply on the issue
+
+When the analysis confirms the bug, explains it, or says no fix should be made, the reply on the
+issue keeps the same evidence in public: a short message, then a closed block.
+
+- **The message**: thank the reporter, say what was confirmed or decided in the first sentence, and
+  point to the PR that fixes it (or say one is coming, or why there won't be one). Under 100 words.
+- **The notes**, in `<details>` with a summary such as `<b>Notes</b>: the reproduction, the cause,
+  and how to check it again`: the reproduction (the page, the Sass or the steps, as code), the cause
+  with the lines linked, the measured values or screenshots before and after, what the fix changes
+  and its limits, the same pattern found elsewhere, and what wasn't checked.
+
+The same rules as the PR notes apply: nothing private, no local paths, screenshots referenced by
+file name for whoever posts. A reply that only asks the reporter for a reproduction, or answers a
+question from the docs, has no notes.
+
 ## What it never holds
 
 - Sections like "What was done", "How to review", "Test plan" or "Checklist", or the repository's PR

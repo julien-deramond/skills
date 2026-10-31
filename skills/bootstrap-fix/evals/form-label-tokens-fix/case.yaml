@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: form-label-tokens-fix
+expected_outcome: |
+  Output the label token map on both label classes, importing the tokens mixin; check every other token map; post a reply that keeps its evidence in collapsed notes.
+  Reference: maintainer feedback on #43231 (2026-10-31): the reply on the issue must keep the full analysis too, not only a summary. The open PR #43233 makes the same change.

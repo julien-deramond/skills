@@ -17,7 +17,7 @@ is checked on everything it touches, the checks pass, and the description says w
 a reviewer needs and nothing else.
 
 You produce, per direction, a **branch** with one commit (two at most) and its **PR description**,
-plus a short **report** for the maintainer. When the caller gives its own output contract (branch
+plus the **reply** to post on the issue and a short **report** for the maintainer. When the caller gives its own output contract (branch
 names, file names, metadata, where to push), follow it for the form and this skill for the content.
 
 ## Hard rules
@@ -60,5 +60,6 @@ names, file names, metadata, where to push), follow it for the form and this ski
    cases ([references/fix.md](references/fix.md), "The impact").
 8. **Commit** one commit, two at most, with a message in the repository's style that says why.
 9. **Write the PR description** ([references/pr-description.md](references/pr-description.md)), with
-   the checks and the evidence in its collapsed notes, and the report: the cause, each direction with its trade-off, the recommended one, and what you
+   the checks and the evidence in its collapsed notes, the reply on the issue, with its own
+   collapsed notes, and the report: the cause, each direction with its trade-off, the recommended one, and what you
    couldn't check.

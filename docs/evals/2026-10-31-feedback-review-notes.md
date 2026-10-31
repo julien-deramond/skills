@@ -20,3 +20,19 @@ Tested on five cases, once with the changed skills and once with the previous ve
 | Total | 23/33 | 32/33 | changed in all 5 |
 
 The new case fails without the change and passes with it, and no other case got worse.
+
+## Second round: the reply on the issue
+
+Feedback on #43231: the reply on the issue must keep the full analysis too. A reply that confirms or
+explains a bug, or says no fix should be made, is now a short message with collapsed notes (the
+reproduction, the cause, the evidence before and after, the limits, the same pattern elsewhere).
+
+New case: `bootstrap-fix/evals/form-label-tokens-fix` (#43231 just before #43233 opened); the
+`list-inline-margin` case gained the same reply grader.
+
+| Case | Previous | Changed | Preferred |
+| --- | --- | --- | --- |
+| form-label-tokens-fix (new) | 6/7 | 7/7 | changed |
+| list-inline-margin | 7/8 | 8/8 | changed |
+
+The patches were identical; only the reply decided it.

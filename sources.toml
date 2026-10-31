@@ -1,0 +1,123 @@
+# Every source a skill took something from, pinned to what was read.
+# AGENTS.md ("Sources") says how to keep this file. `informs = []` means the source shaped the
+# repository itself, not one skill.
+
+[[source]]
+id = "mattpocock-code-review"
+kind = "git"
+repo = "mattpocock/skills"
+path = "skills/engineering/code-review/SKILL.md"
+commit = "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+license = "MIT"
+informs = ["bootstrap-review"]
+took = """
+The two axes kept apart: spec (does the change do what the issue asked, all of it and nothing more)
+and standards (does it follow the repository's own rules), so a pass on one can't hide a fail on the
+other. The idea only, rewritten; its code-smell baseline wasn't taken.
+"""
+
+[[source]]
+id = "claude-code-code-review"
+kind = "release"
+product = "Claude Code"
+name = "/code-review (built-in skill)"
+read = "2026-10-31"
+informs = ["bootstrap-review"]
+took = """
+Each finding goes through a verification pass that tries to disprove it, and only findings that
+survive are reported. The idea only.
+"""
+
+[[source]]
+id = "twbs-bootstrap-agents"
+kind = "git"
+repo = "twbs/bootstrap"
+path = "AGENTS.md"
+commit = "f0dcf4b5e8b755912d6d8528b16f286e5cfea267"
+informs = ["bootstrap-review"]
+took = """
+Read at run time, never copied. references/bootstrap.md lists only what AGENTS.md doesn't say
+(review judgement, release lines, past review findings). When AGENTS.md changes, check that
+bootstrap.md doesn't repeat or contradict it.
+"""
+
+[[source]]
+id = "twbs-bootstrap-skills"
+kind = "git"
+repo = "twbs/bootstrap"
+path = "skills/"
+commit = "f0dcf4b5e8b755912d6d8528b16f286e5cfea267"
+informs = ["bootstrap-review"]
+took = """
+Read at run time, never copied: bootstrap-component, bootstrap-component-js, bootstrap-color-system,
+bootstrap-utility-api and the migration skills describe how v6 code should be written, which is the
+standard a v6 pull request is checked against. When a skill is added or renamed there, update the
+table in bootstrap-review's SKILL.md (step 4).
+"""
+
+[[source]]
+id = "maintainer-review-history"
+kind = "corpus"
+description = "Julien Déramond's public reviews and comments on 297 twbs/bootstrap pull requests, December 2022 to October 2026"
+read = "2026-10-31"
+informs = ["bootstrap-review"]
+took = """
+The recurring checks, ranked by how often they come up (rendering on the deploy preview, a
+non-regression diff of the build, the release line, tests for JavaScript, browser support,
+accessibility, Sass conventions, docs examples that work in a default build, scope), the tone of the
+review, and the first eval cases.
+"""
+
+[[source]]
+id = "maintainer-triage-method"
+kind = "corpus"
+private = true
+description = "A private maintainers' workspace with written analyses of open twbs/bootstrap pull requests"
+read = "2026-10-31"
+informs = ["bootstrap-review"]
+took = """
+The report's shape (what it is, where it stands, findings, directions, recommendation, next action),
+the rules for pull requests from outside contributors, measured evidence (probes written from
+scratch, both sides built, computed values in a table), competing directions, and "worth doing?".
+Rewritten; no text copied.
+"""
+
+[[source]]
+id = "anthropic-skill-creator"
+kind = "git"
+repo = "anthropics/skills"
+path = "skills/skill-creator/"
+commit = "b9e19e6f44773509fbdd7001d77ff41a49a486c1"
+license = "Apache-2.0"
+informs = []
+took = """
+The eval case layout read by `claude plugin eval` (prompt.md, case.yaml, graders/), and with-skill
+against without-skill runs as the way to judge a change.
+"""
+
+[[source]]
+id = "antfu-skills-repo"
+kind = "git"
+repo = "antfu/skills"
+path = "AGENTS.md"
+commit = "7de210b51c8d48cc405a4eac3e17cbb1396c653b"
+license = "MIT"
+informs = []
+took = """
+Recording the source commit a skill was written from, so an update starts from a diff, and a README
+per skill for people and credits, kept out of what the agent loads.
+"""
+
+[[source]]
+id = "mattpocock-skills-repo"
+kind = "git"
+repo = "mattpocock/skills"
+path = "CLAUDE.md"
+commit = "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa"
+license = "MIT"
+informs = []
+took = """
+A status for each skill (draft, in progress, promoted), decisions kept as ADRs in the repository,
+and no em dashes in any prose. Status became metadata here instead of bucket folders, so a skill
+never moves.
+"""

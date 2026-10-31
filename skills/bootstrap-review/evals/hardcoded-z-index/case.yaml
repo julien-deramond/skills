@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: hardcoded-z-index
+expected_outcome: |
+  Request changes: a hard-coded z-index and unrelated formatting changes.
+  Reference: A maintainer's review (2023). The PR was closed.

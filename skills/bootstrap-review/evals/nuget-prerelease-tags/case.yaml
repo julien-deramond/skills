@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: nuget-prerelease-tags
+expected_outcome: |
+  Comment: the tag match would also publish prerelease versions.
+  Reference: A maintainer's line comments on the workflow (2025). Addressed and merged.

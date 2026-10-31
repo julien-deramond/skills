@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: is-selector-link-regressions
+expected_outcome: |
+  Request changes or close: the selector rewrite changes how links render, and `:is()` is outside v5's browser support.
+  Reference: A maintainer's review (2024). The PR was closed.

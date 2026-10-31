@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: radio-switch-radius-approve
+expected_outcome: |
+  Approve: the fix is correct and small. A good review finds nothing blocking.
+  Reference: A maintainer approved this commit (2023) and it was merged.

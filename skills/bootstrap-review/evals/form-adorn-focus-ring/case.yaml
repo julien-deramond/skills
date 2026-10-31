@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: form-adorn-focus-ring
+expected_outcome: |
+  Request changes: the bug is the focus ring, not the border, and a one-line `:focus-within` in the existing `.form-control` validation rule fixes it with less code.
+  Reference: A written maintainer analysis of this commit (October 2026). Open PR.

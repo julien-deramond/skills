@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: vertical-button-group-corners
+expected_outcome: |
+  Request changes: the vertical button group renders with wrong corners.
+  Reference: A maintainer's review on the PR (2024). The fix was then changed and merged.

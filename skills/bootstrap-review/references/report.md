@@ -1,6 +1,7 @@
 # The report and the review
 
-Two texts: the report for the maintainer who decides, the review for the author. A caller's own
+Two texts: the report for the maintainer who decides, the review for the author and everyone who
+reads the PR later (a short message, with the full public analysis collapsed under it). A caller's own
 format (file names, metadata, a required footer) replaces the form below, not the content.
 
 ## The report
@@ -32,12 +33,14 @@ Plain paragraphs. Bullets only for a list of parallel things, tables for states 
 
 ## The review
 
-What the maintainer posts on the PR, nothing around it. It reads like a maintainer wrote it: short,
-kind and specific.
+What the maintainer posts on the PR, nothing around it. It has two parts: the message, then the
+review notes.
 
-Keep it under 150 words for one finding and under 300 for several, code blocks aside. The detail
-lives in the report: the review names the finding and its fix, and doesn't repeat the evidence
-tables or the list of what was checked.
+### The message
+
+It reads like a maintainer wrote it: short, kind and specific. Keep it under 150 words for one
+finding and under 300 for several, code blocks aside. It names the finding and its fix, and ends by
+pointing to the notes; the evidence goes in the notes.
 
 - Open with a short thanks to the author by handle, then the decision within the first three
   sentences ("The
@@ -55,7 +58,39 @@ tables or the list of what was checked.
   supersedes it), and say a new PR is welcome when it is.
 - When the review was drafted by an agent, it ends with the disclosure line the caller requires.
 
-Don't restate the PR to its author, pad it with praise or list every check that passed.
+Don't restate the PR to its author or pad it with praise.
+
+### The review notes
+
+The full analysis goes on the PR too, so it isn't lost: whoever lands on the PR later, from
+`git blame` or an issue, sees what was verified and can check it again. It sits under the message,
+in a closed block:
+
+```markdown
+<details>
+<summary><b>Review notes</b>: what was checked, and how to check it again</summary>
+
+…
+
+</details>
+```
+
+Written for a public reader, it holds:
+
+- The cause, with the lines linked at the reviewed commit.
+- The evidence: the compiled CSS diff in full, measured values in a table (case, before, after), the
+  engines tested.
+- Screenshots in Before | After pairs, referenced by file name (`![before: the vertical group at
+  900px](before.png)`): whoever posts the review attaches the files, so GitHub hosts them.
+- Each behaviour change, in a sentence.
+- Every check run with its result, and what wasn't checked.
+- Related findings outside the PR, a line each.
+- A nested closed block, "How to check it again": the probe page, the Sass or the script, as code.
+
+It never holds the next action, labels or metadata, anything private (a private repository, notes,
+names of internal tools), local paths, or a link the untrusted-PR rules forbid. A request for
+changes keeps its requests in the message and its evidence in the notes. For a trivial PR whose diff
+is its own evidence, the notes are a few lines.
 
 ## Line comments
 
@@ -64,5 +99,5 @@ must stand on its own without them.
 
 ## Approvals
 
-An approval of a non-trivial PR says in one sentence what was verified. A trivial one ("Good catch,
-thanks @author") is enough when the diff is its own evidence.
+An approval of a non-trivial PR says in one sentence what was verified, and the notes show it. A
+trivial one ("Good catch, thanks @author") is enough when the diff is its own evidence.

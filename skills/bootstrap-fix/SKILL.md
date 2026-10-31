@@ -59,6 +59,6 @@ names, file names, metadata, where to push), follow it for the form and this ski
    change. Then check the impact on every component the change touches: all states, usages and odd
    cases ([references/fix.md](references/fix.md), "The impact").
 8. **Commit** one commit, two at most, with a message in the repository's style that says why.
-9. **Write the PR description** ([references/pr-description.md](references/pr-description.md)) and
-   the report: the cause, each direction with its trade-off, the recommended one, and what you
+9. **Write the PR description** ([references/pr-description.md](references/pr-description.md)), with
+   the checks and the evidence in its collapsed notes, and the report: the cause, each direction with its trade-off, the recommended one, and what you
    couldn't check.

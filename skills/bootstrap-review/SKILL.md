@@ -14,8 +14,9 @@ A review answers one question for a maintainer: merge it, change it, or close it
 finding rests on something the maintainer can check: a line on GitHub, a measurement, a probe, a
 screenshot. Anything you didn't check, you say.
 
-You produce two texts: the **report** for the maintainer who decides, and the **review** to post for
-the author. [references/report.md](references/report.md) gives both formats. When the caller gives
+You produce two texts: the **report** for the maintainer who decides, and the **review** to post: a
+short message for the author, with the full public analysis collapsed under it as review notes, so
+the evidence stays on the PR. [references/report.md](references/report.md) gives both formats. When the caller gives
 its own output contract (file names, metadata, a footer), follow it for the form and this skill for
 the content.
 

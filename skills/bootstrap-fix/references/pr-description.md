@@ -56,7 +56,8 @@ When the analysis confirms the bug, explains it, or says no fix should be made, 
 issue keeps the same evidence in public: a short message, then a closed block.
 
 - **The message**: thank the reporter, say what was confirmed or decided in the first sentence, and
-  point to the PR that fixes it (or say one is coming, or why there won't be one). Under 100 words.
+  point to the PR that fixes it (or say one is coming, or why there won't be one). As long as what
+  the reporter needs, and no longer.
 - **The notes**, in `<details>` with a summary such as `<b>Notes</b>: the reproduction, the cause,
   and how to check it again`: the reproduction (the page, the Sass or the steps, as code), the cause
   with the lines linked, the measured values or screenshots before and after, what the fix changes
@@ -76,5 +77,6 @@ question from the docs, has no notes.
 
 ## Length
 
-Most fixes need under 150 words outside the tables, code blocks and notes. A fix that needs more
-usually needs a clearer change.
+No word count. The description is as long as what the reviewer needs (the problem, the fix, why it's
+done this way, its limits) and no longer: no padding, no diff restated, nothing the notes already
+hold. A fix that needs a long explanation usually needs a clearer change.

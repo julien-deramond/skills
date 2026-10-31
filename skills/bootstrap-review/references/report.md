@@ -44,9 +44,9 @@ blocks and ` ```suggestion ` blocks keep their code as it is.
 
 ### The message
 
-It reads like a maintainer wrote it: short, kind and specific. Keep it under 150 words for one
-finding and under 300 for several, code blocks aside. It names the finding and its fix, and ends by
-pointing to the notes; the evidence goes in the notes.
+It reads like a maintainer wrote it: short, kind and specific. There's no word count: it holds what
+the author needs to act on, each finding with its fix, and nothing else. It ends by pointing to the
+notes; the evidence goes in the notes.
 
 - Open with a short thanks to the author by handle, then the decision within the first three
   sentences ("The

@@ -17,7 +17,9 @@ is checked on everything it touches, the checks pass, and the description says w
 a reviewer needs and nothing else.
 
 You produce, per direction, a **branch** with one commit (two at most) and its **PR description**,
-plus the **reply** to post on the issue and a short **report** for the maintainer. When the caller gives its own output contract (branch
+plus the **reply** to post on the issue and a short **report** for the maintainer. A PR that
+supersedes another one is a fix like any other, and gets the whole process: credit its author with a
+`Co-authored-by:` trailer in the commit and say "Supersedes #<n>" in the opening. When the caller gives its own output contract (branch
 names, file names, metadata, where to push), follow it for the form and this skill for the content.
 
 ## Hard rules

@@ -2,6 +2,11 @@
 
 Write it for a reviewer who has never seen the issue. They read it once, then the diff.
 
+**Plain paragraphs, always.** Bootstrap's `AGENTS.md` asks for bulleted PR descriptions, and the
+repository has a PR template with headings and checkboxes. This skill follows neither, by the
+maintainers' choice: the description is the paragraphs below, the way their own merged fixes read.
+Where the caller's or the project's rules disagree on anything else, those rules win.
+
 ## Form
 
 - **Title**: what the change does, in the style of the repository's merged PRs ("Fix invalid division

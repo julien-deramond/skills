@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: css-grid-variable-name
+expected_outcome: |
+  Request a small change: the docs row names `$enable-css-grid`, but the variable Bootstrap reads is `$enable-cssgrid`.
+  Reference: Missed in the maintainer review of this commit and corrected later on v5-dev, where the docs now say `$enable-cssgrid`. Checked against scss/_variables.scss at the merge base.

@@ -156,7 +156,7 @@ def check_prose():
 
 
 def main():
-    folders = sorted(p for p in SKILLS.iterdir() if p.is_dir()) if SKILLS.exists() else []
+    folders = sorted(p for p in SKILLS.iterdir() if p.is_dir() and not p.name.endswith("-workspace")) if SKILLS.exists() else []
     for folder in folders:
         check_skill(folder)
     check_sources({folder.name for folder in folders})

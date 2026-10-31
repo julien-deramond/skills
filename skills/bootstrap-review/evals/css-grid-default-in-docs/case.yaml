@@ -1,5 +1,5 @@
 schema_version: "1.1"
 name: css-grid-default-in-docs
 expected_outcome: |
-  Comment or request a small change: the docs give the wrong default for `$enable-css-grid`.
-  Reference: A maintainer's line comment on the PR (2024). Fixed with the suggested change and merged.
+  Request a small change: the new row says `$enable-css-grid` is `true` by default; the released library defaults it to `false` (only the docs build turns it on), and the variable is named `$enable-cssgrid`.
+  Reference: A maintainer's line comment on this commit (2024), fixed in the next commit; the name was corrected later.

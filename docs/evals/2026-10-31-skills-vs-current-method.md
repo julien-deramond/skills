@@ -50,12 +50,38 @@ The points were lost on two things both methods share:
   and radio next to the switch in #43179. The graders counted these as out of scope. The skill
   tells it to fix the same pattern where it repeats, so this is a rule to settle, not a slip.
 
+## Fixes, after two rule changes
+
+Two rules were settled after the first fix round, and the skill now follows them:
+
+- PR descriptions are plain paragraphs, never bullets and never the PR template, even though
+  Bootstrap's `AGENTS.md` asks for bullets.
+- A fix covers its topic globally. When the same cause affects sibling components, sizes or
+  variants, they're all fixed in the same branch, and the impact is checked on every component the
+  change touches.
+
+The graders gained a scope grader that follows the global rule and an impact grader. The six cases
+ran again with the updated skill and were graded blind against the same current-method runs.
+
+| | Skill | Current method |
+| --- | --- | --- |
+| Grader statements passed | 36 of 37 (97%) | 32 of 37 (86%) |
+| Preferred fix | 6 (1 clear, 5 slight) | 0 |
+| Patches that apply and build | 6 of 6 | 6 of 6 |
+| Tokens and time per run | 143k, 6.5 min | 150k, 6.2 min |
+
+The current method's misses are four PR descriptions over 200 words and one docs change not checked
+on the rendered page. The skill's one miss is a PR description without the attribution line the
+caller requires; the run had no caller contract giving that line. The clear preference is #43174.
+There the skill chose `display: grid` for the five date and time types, after measuring that the
+issue's `display: block` shifts the value in WebKit. Grid leaves WebKit and Firefox pixel-identical.
+
 ## Verdict
 
 - **Reviews:** better than the current method. The gain is measured evidence and shorter reviews,
   not more findings.
-- **Fixes:** as good as the current method, not better yet. Two rules decide the next gain: the PR
-  description format for twbs/bootstrap, and whether a fix's siblings belong in the same PR.
+- **Fixes:** with the two rules settled, better than the current method, mostly on description
+  length and impact checks. The fixes themselves were already as good.
 
 ## Limits
 

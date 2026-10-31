@@ -59,7 +59,7 @@ names, file names, metadata, where to push), follow it for the form and this ski
 7. **Check it** ([references/fix.md](references/fix.md), "Checks"): run what the change touches,
    build both sides when the output changes, and take the before and after evidence for a visual
    change. Then check the impact on every component the change touches: all states, usages and odd
-   cases ([references/fix.md](references/fix.md), "The impact").
+   cases, and for JavaScript its events and methods ([references/fix.md](references/fix.md), "The impact").
 8. **Commit** one commit, two at most, with a message in the repository's style that says why.
 9. **Write the PR description** ([references/pr-description.md](references/pr-description.md)), with
    the checks and the evidence in its collapsed notes, the reply on the issue, with its own

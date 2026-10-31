@@ -45,6 +45,13 @@ input group, long or wrapping content, right to left, dark mode, a narrow width,
 regression in a case nobody reported is still a regression. The report lists what was checked and
 what wasn't.
 
+A JavaScript change also checks the component's events and public methods, on the base and on the
+fix, with real input: which events fire, how many times and with what values, for every key, click
+and method call the change reaches. That includes the ones that change nothing, such as
+<kbd>Delete</kbd> after the last character or <kbd>Backspace</kbd> in an empty field: a plain input
+fires nothing there. Count the events in the probe and in a unit test, not only the value and the
+DOM.
+
 ## Evidence for a visual change
 
 A change is visual when it can change how something looks. Take the same page, width, theme and
